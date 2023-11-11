@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064957ea01d60004facde86cef4bbefc, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  identifier: Data
+  buildKey: 54223398ac2020546aac9058e966654b
+  groupID: 85d89dae-f0a1-402e-9bb1-f67f33bd9232
+  boundingBoxWithHandlesPrefab: {fileID: 5671351296789090341, guid: 7b542306e34a62f4c9a822fcb19b7d99,
+    type: 3}
+  stateChanged: 0
+  placables:
+  - identifier: AlienShip
+    prefab: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
+  - identifier: Game
+    prefab: {fileID: 3547280691157600155, guid: d0214c6e78b3a4045b3fabb634af16da,
+      type: 3}
