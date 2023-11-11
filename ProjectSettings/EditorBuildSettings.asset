@@ -14,10 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Packages/ubc.ok.ovilab.roadmapauthoring/Assets/Scenes/VR_Scene.unity
     guid: 99c9720ab356a0642a771bea13969a76
-  - enabled: 0
+  - enabled: 1
     path: Assets/Roadmap.Generated/Scenes/generated_AR_Scene.unity
     guid: 36c05d249d18fd743af1e420c48bb808
-  - enabled: 1
+  - enabled: 0
     path: Assets/Roadmap.Generated/Scenes/generated_VR_Scene.unity
     guid: d1690cde0edb31c4f9c0566ae3323051
   m_configObjects:

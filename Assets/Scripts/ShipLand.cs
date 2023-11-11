@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShipLand : MonoBehaviour
 {
+    private bool isShown = false;
+    public GameObject objectToActivate;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,18 @@ public class ShipLand : MonoBehaviour
         if(position.y > 1)
         {
             position.y -= 0.05f;
+        } else if(!isShown)
+        {
+            if (objectToActivate != null)
+            {
+                // Set the active state of the object
+                objectToActivate.SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("Object was not assigned.");
+            }
+            isShown = true;
         }
         transform.position = position;
     }
