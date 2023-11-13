@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
-
-    private GameManager()
+    //private static GameManager instance;
+    public enum StateType
     {
+        SHIP_LAND,
+        INTRO_TEXT,
+        SQUIRREL_RUN,
+        FOUNTAIN_TEXT
+    };
+    public StateType state = StateType.SHIP_LAND;
+    //private GameManager()
+    //{
         // initialize your game manager here. Do not reference to GameObjects here (i.e. GameObject.Find etc.)
         // because the game manager will be created before the objects
-    }
+    //    state = StateType.SHIP_LAND;
+    //}
 
-    public static GameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = new GameManager();
-            }
+    //public static GameManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            instance = new GameManager();
+    //        }
 
-            return instance;
-        }
-    }
-
-    // Add your game mananger members here
+    //        return instance;
+    //    }
+    //}
 }

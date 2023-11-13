@@ -4,75 +4,70 @@ using UnityEngine;
 
 public class SquirrelRun : MonoBehaviour
 {
-    private bool isShown = false;
     private bool isRunning = false;
     private bool isClose = false;
-    public GameObject objectToActivate;
     public GameObject fountain;
     public float speed = 0.01f;
     public float closeness = 5f;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-
+        Vector3 position = transform.position;
+        position.y = 0;
+        transform.position = position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerPosition = GameObject.Find("Main Camera").transform.position;
-        Vector3 position = transform.position;
-        Vector3 fountainPosition = fountain.transform.position;
-
-        if(playerPosition.x - position.x < closeness && playerPosition.x - position.x > -closeness)
+        if(gameManager.state == GameManager.StateType.SQUIRREL_RUN)
         {
-            if (playerPosition.z - position.z < closeness && playerPosition.z - position.z > -closeness)
-            {
-                isClose = true;
-            }
-        }
+            Vector3 playerPosition = GameObject.Find("Main Camera").transform.position;
+            Vector3 position = transform.position;
+            Vector3 fountainPosition = fountain.transform.position;
 
-        if(isClose)
-        {
-            if (position.x - fountainPosition.x > speed)
+            if (playerPosition.x - position.x < closeness && playerPosition.x - position.x > -closeness)
             {
-                position.x -= speed;
-                isRunning = true;
-            }
-            else if (position.x - fountainPosition.x < -speed)
-            {
-                position.x += speed;
-                isRunning = true;
-            }
-
-            if (position.z - fountainPosition.z > speed)
-            {
-                position.z -= speed;
-                isRunning = true;
-            }
-            else if (position.z - fountainPosition.z < -speed)
-            {
-                position.z += speed;
-                isRunning = true;
-            }
-
-            if (!isRunning && !isShown)
-            {
-                if (objectToActivate != null)
+                if (playerPosition.z - position.z < closeness && playerPosition.z - position.z > -closeness)
                 {
-                    // Set the active state of the object
-                    objectToActivate.SetActive(true);
+                    isClose = true;
                 }
-                else
-                {
-                    Debug.LogError("Object was not assigned.");
-                }
-                isShown = true;
             }
+
+            if (isClose)
+            {
+                if (position.x - fountainPosition.x > speed)
+                {
+                    position.x -= speed;
+                    isRunning = true;
+                }
+                else if (position.x - fountainPosition.x < -speed)
+                {
+                    position.x += speed;
+                    isRunning = true;
+                }
+
+                if (position.z - fountainPosition.z > speed)
+                {
+                    position.z -= speed;
+                    isRunning = true;
+                }
+                else if (position.z - fountainPosition.z < -speed)
+                {
+                    position.z += speed;
+                    isRunning = true;
+                }
+
+                if (!isRunning)
+                {
+                    gameManager.state = GameManager.StateType.FOUNTAIN_TEXT;
+                }
+            }
+
+            transform.position = position;
+            isClose = false;
+            isRunning = false;
         }
-        
-        transform.position = position;
-        isClose = false;
-        isRunning = false;
     }
 }
