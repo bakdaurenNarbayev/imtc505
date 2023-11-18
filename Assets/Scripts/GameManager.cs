@@ -10,9 +10,16 @@ public class GameManager : MonoBehaviour
         SHIP_LAND,
         INTRO_TEXT,
         SQUIRREL_RUN,
-        FOUNTAIN_TEXT
+        FOUNTAIN_TEXT,
+        VALVE_FIX,
+        BUCKET_FILL
     };
+    
     public StateType state = StateType.SHIP_LAND;
+
+    public void Set(StateType proposedState) {
+        state = proposedState;
+    }
     //private GameManager()
     //{
         // initialize your game manager here. Do not reference to GameObjects here (i.e. GameObject.Find etc.)

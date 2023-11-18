@@ -19,7 +19,7 @@ public class ShowFountainText : MonoBehaviour
         if (gameManager.state == GameManager.StateType.FOUNTAIN_TEXT)
         {
             objectToActivate.SetActive(true);
-            gameManager.state = GameManager.StateType.SQUIRREL_RUN;
+            gameManager.state = GameManager.StateType.VALVE_FIX;
         }
     }
 }

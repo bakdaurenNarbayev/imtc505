@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ShipLand : MonoBehaviour
 {
-    public float speed = 0.05f;
-    public float groundLevel = 0f;
     public GameManager gameManager;
+    
+    private float speed = 0.015f;
+    private float groundLevel = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Vector3 position = transform.position;
+        position.y = 30f;
+        transform.position = position;
     }
 
     // Update is called once per frame
