@@ -21,11 +21,9 @@ public class ValvePosition : MonoBehaviour
     {
         if(gameManager.state == GameManager.StateType.VALVE_FIX) {
             rotation = GameObject.Find("Valve").transform.rotation;
-            if(rotation.y - initialRotation.y > 80) {
-                gameManager.state = GameManager.StateType.BUCKET_FILL;
-                Debug.Log("Finally");
+            if(rotation.y - initialRotation.y > 0.5) {
+                gameManager.state = GameManager.StateType.WATER_FILL;
             }
         }
-        
     }
 }

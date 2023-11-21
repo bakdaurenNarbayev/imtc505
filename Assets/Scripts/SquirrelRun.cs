@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class SquirrelRun : MonoBehaviour
 {
-    private bool isRunning = false;
-    private bool isClose = false;
     public GameObject fountain;
     public float speed = 0.01f;
     public float closeness = 5f;
+    public float goalCloseness = 2f;
     public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
@@ -27,47 +26,19 @@ public class SquirrelRun : MonoBehaviour
             Vector3 position = transform.position;
             Vector3 fountainPosition = fountain.transform.position;
 
-            if (playerPosition.x - position.x < closeness && playerPosition.x - position.x > -closeness)
+            Vector3 movement = (fountainPosition - position).normalized;
+
+            if (Vector3.Distance(position, playerPosition) < closeness)
             {
-                if (playerPosition.z - position.z < closeness && playerPosition.z - position.z > -closeness)
+                if(Vector3.Distance(position, fountainPosition) > goalCloseness)
                 {
-                    isClose = true;
-                }
-            }
-
-            if (isClose)
-            {
-                if (position.x - fountainPosition.x > speed)
-                {
-                    position.x -= speed;
-                    isRunning = true;
-                }
-                else if (position.x - fountainPosition.x < -speed)
-                {
-                    position.x += speed;
-                    isRunning = true;
-                }
-
-                if (position.z - fountainPosition.z > speed)
-                {
-                    position.z -= speed;
-                    isRunning = true;
-                }
-                else if (position.z - fountainPosition.z < -speed)
-                {
-                    position.z += speed;
-                    isRunning = true;
-                }
-
-                if (!isRunning)
-                {
+                    position = position + speed * movement;
+                } else {
                     gameManager.state = GameManager.StateType.FOUNTAIN_TEXT;
                 }
             }
 
             transform.position = position;
-            isClose = false;
-            isRunning = false;
         }
     }
 }
