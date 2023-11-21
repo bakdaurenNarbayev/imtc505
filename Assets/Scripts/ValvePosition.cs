@@ -9,10 +9,6 @@ public class ValvePosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 position = transform.position;
-        position.y = 0;
-        transform.position = position;
-
         initialRotation = GameObject.Find("Valve").transform.rotation;
     }
 

@@ -6,15 +6,8 @@ public class ShipLand : MonoBehaviour
 {
     public GameManager gameManager;
     
-    private float speed = 0.015f;
-    private float groundLevel = 0f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Vector3 position = transform.position;
-        position.y = 30f;
-        transform.position = position;
-    }
+    private float speed = 0.025f;
+    private float groundLevel = 1.5f;
 
     // Update is called once per frame
     void Update()

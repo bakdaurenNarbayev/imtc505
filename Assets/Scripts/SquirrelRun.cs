@@ -9,13 +9,6 @@ public class SquirrelRun : MonoBehaviour
     public float closeness = 5f;
     public float goalCloseness = 2f;
     public GameManager gameManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Vector3 position = transform.position;
-        position.y = 0;
-        transform.position = position;
-    }
 
     // Update is called once per frame
     void Update()
