@@ -23,26 +23,20 @@ public class BucketFill : MonoBehaviour
             {
                 float distance = Vector3.Distance(child.position, transform.position);
 
-                if (distance < detectionRadius && transform.position.y <= -0.3f)
+                if (distance < detectionRadius && transform.position.y <= 0f)
                 {
-                    position = transform.position;
-                    position.y = -0.3f;
-                    transform.position = position;
+                    position = bucketWater.position;
+                    position.y = -0.1f-transform.position.y;
+                    bucketWater.position = position;
                     
-                    if(count <= 4000 && count % 1000 == 0) {
-                        scale = bucketWater.localScale;
-                        scale.y = scale.y + 0.005f;
-                        bucketWater.localScale = scale;
+                    if(transform.position.y <= -0.2f) {
+                        position = transform.position;
+                        position.y = -0.2f;
+                        transform.position = position;
 
-                        position = bucketWater.position;
-                        position.y = 0f;
-                        bucketWater.position = position;
+                        gameManager.state = GameManager.StateType.SQUIRREL_RUN_AGAIN;
                     }
-                    count++;
-                    if(count > 4000) {
-                        gameManager.state = GameManager.StateType.TREE_WATER;
-                    }
-
+                    
                     break;
                 }
             }

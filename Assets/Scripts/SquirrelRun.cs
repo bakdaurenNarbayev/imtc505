@@ -36,32 +36,41 @@ public class SquirrelRun : MonoBehaviour
             transform.position = position;
         }
 
-        // if(gameManager.state == GameManager.StateType.TREE_WATER) {
-        //     Vector3 position = transform.position;
-        //     Vector3 wpPosition = wp1.transform.position;
+        if(gameManager.state == GameManager.StateType.SQUIRREL_RUN_AGAIN) {
+            Vector3 position = transform.position;
+            Vector3 wpPosition = wp1.transform.position;
 
-        //     switch(count) {
-        //         case 1:
-        //         case 2:
-        //         case 3:
-        //         case 4:
-        //     }
+            switch(count) {
+                case 1:
+                    break;
+                case 2:
+                    wpPosition = wp2.transform.position;
+                    break;
+                case 3:
+                    wpPosition = wp3.transform.position;
+                    break;
+                case 4:
+                    wpPosition = wp4.transform.position;
+                    break;
+                default:
+                    break;
+            }
 
-           
+            if(count > 4) {
+                gameManager.state = GameManager.StateType.TREE_TEXT;
+                return;
+            }
 
-        //     Vector3 movement = (fountainPosition - position).normalized;
+            Vector3 movement = (wpPosition - position).normalized;
 
-        //     if (Vector3.Distance(position, playerPosition) < closeness)
-        //     {
-        //         if(Vector3.Distance(position, fountainPosition) > goalCloseness)
-        //         {
-        //             position = position + speed * movement;
-        //         } else {
-        //             gameManager.state = GameManager.StateType.FOUNTAIN_TEXT;
-        //         }
-        //     }
+            if(Vector3.Distance(position, wpPosition) > goalCloseness)
+            {
+                position = position + speed * movement;
+            } else {
+                count++;
+            }
 
-        //     transform.position = position;
-        // }
+            transform.position = position;
+        }
     }
 }
