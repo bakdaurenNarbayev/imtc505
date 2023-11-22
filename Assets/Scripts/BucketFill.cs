@@ -6,7 +6,7 @@ public class BucketFill : MonoBehaviour
 {
     public GameManager gameManager;
     public Transform water, bucketWater;
-    private float detectionRadius = 2f;
+    private float detectionRadius = 4f;
     private Vector3 position, scale;
     private int count = 1;
 
@@ -23,20 +23,14 @@ public class BucketFill : MonoBehaviour
             {
                 float distance = Vector3.Distance(child.position, transform.position);
 
-                if (distance < detectionRadius && transform.position.y <= 0f)
+                if (distance < detectionRadius && transform.position.y <= -0.1f)
                 {
                     position = bucketWater.position;
-                    position.y = -0.1f-transform.position.y;
+                    position.y = 0.1f;
                     bucketWater.position = position;
-                    
-                    if(transform.position.y <= -0.2f) {
-                        position = transform.position;
-                        position.y = -0.2f;
-                        transform.position = position;
 
-                        gameManager.state = GameManager.StateType.SQUIRREL_RUN_AGAIN;
-                    }
-                    
+                    gameManager.state = GameManager.StateType.SQUIRREL_RUN_AGAIN;
+
                     break;
                 }
             }
