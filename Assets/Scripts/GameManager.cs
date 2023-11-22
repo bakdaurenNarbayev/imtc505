@@ -12,7 +12,9 @@ public class GameManager : MonoBehaviour
         SQUIRREL_RUN,
         FOUNTAIN_TEXT,
         VALVE_FIX,
-        WATER_FILL
+        WATER_FILL,
+        BUCKET_FILL,
+        TREE_WATER,
     };
     
     public StateType state = StateType.SHIP_LAND;

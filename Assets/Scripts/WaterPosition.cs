@@ -17,7 +17,7 @@ public class WaterPosition : MonoBehaviour
     void Update()
     {
         if(gameManager.state == GameManager.StateType.WATER_FILL) {
-            if(count <= 5000 && count % 250 == 0) {
+            if(count <= 4500 && count % 250 == 0) {
                 foreach (Transform child in transform)
                 {
                     scale = child.localScale;
@@ -26,12 +26,11 @@ public class WaterPosition : MonoBehaviour
                 }
 
                 transform.position = initialPosition;
-
-                Debug.Log(transform.position);
-                Debug.Log(scale);
-                Debug.Log(transform.localScale);
             }
             count++;
+            if(count > 4500) {
+                gameManager.state = GameManager.StateType.BUCKET_FILL;
+            }
         }
     }
 }
