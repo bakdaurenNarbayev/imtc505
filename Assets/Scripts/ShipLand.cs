@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ShipLand : MonoBehaviour
 {
-    public GameManager gameManager;
-    
+    private GameManager gameManager;
     private float speed = 0.025f;
     private float groundLevel = 1.5f;
+
+    void State()
+    {
+        Debug.Log("Here");
+        //gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
+        //Debug.Log(gameManager);
+    }
 
     // Update is called once per frame
     void Update()
@@ -25,5 +31,8 @@ public class ShipLand : MonoBehaviour
             }
             transform.position = position;
         }
+
+        Debug.Log("Ship state is");
+        Debug.Log(gameManager.state);
     }
 }

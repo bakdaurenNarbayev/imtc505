@@ -8,7 +8,7 @@ public class GamePosition : MonoBehaviour
     void Start()
     {
         Vector3 position = transform.position;
-        position.y = 1.5f;
+        position.y = 0;
         transform.position = position;
     }
 

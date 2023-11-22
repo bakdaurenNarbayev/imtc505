@@ -20,15 +20,9 @@ public class GameManager : MonoBehaviour
     
     public StateType state = StateType.SHIP_LAND;
 
-    public GameObject env;
-
-    void Start()
+    private void Update()
     {
-        env.SetActive(false);
-    }
-
-    void Update()
-    {
+        //Debug.Log("Game state is");
         //Debug.Log(state);
     }
 }
