@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: SampleData
   buildKey: b10936b52578156469ea4ba51032a93b
-  groupID: 
+  groupID: 85d89dae-f0a1-402e-9bb1-f67f33bd9232
   boundingBoxWithHandlesPrefab: {fileID: 5671351296789090341, guid: 7b542306e34a62f4c9a822fcb19b7d99,
     type: 3}
   stateChanged: 0
   placables:
   - identifier: Lander
     prefab: {fileID: 100018, guid: f9a8072f5d9b92347a999f10f01b8012, type: 3}
+  - identifier: FountainValve
+    prefab: {fileID: 169302, guid: 2b6a2468456beb54da8dc355577cf363, type: 3}
