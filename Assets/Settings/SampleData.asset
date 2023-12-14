@@ -19,7 +19,18 @@ MonoBehaviour:
     type: 3}
   stateChanged: 0
   placables:
-  - identifier: Lander
-    prefab: {fileID: 100018, guid: f9a8072f5d9b92347a999f10f01b8012, type: 3}
+  - identifier: GameManager
+    prefab: {fileID: 7459219841997345945, guid: 0442517590de35c4993673ae1680c510,
+      type: 3}
+  - identifier: AlienShip
+    prefab: {fileID: 1458391615630120, guid: 3319dbabb9bdfd24e977bd7d70764eb0, type: 3}
+  - identifier: IntroText
+    prefab: {fileID: 6930810733556124559, guid: 906877960179d7e43a0a8fb7dc7ce8fb,
+      type: 3}
+  - identifier: Squirrel
+    prefab: {fileID: 1745488152287196, guid: fde5b764f9082cd4a8969c93986aa53a, type: 3}
   - identifier: FountainValve
     prefab: {fileID: 169302, guid: 2b6a2468456beb54da8dc355577cf363, type: 3}
+  - identifier: Bucket
+    prefab: {fileID: 5882448671471983631, guid: a8ec020d33f1adc439a008e158d63ba1,
+      type: 3}

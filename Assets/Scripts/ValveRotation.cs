@@ -24,9 +24,9 @@ public class ValveRotation : MonoBehaviour
             rotation.y = initialRotation.y;
         }
 
-        if (rotation.y - initialRotation.y > 0.5)
+        if (rotation.y - initialRotation.y > 4)
         {
-            rotation.y = initialRotation.y + 0.5f;
+            rotation.y = initialRotation.y + 4f;
             Debug.Log("GM CALL: VALVE -> FILL FOUNTAIN");
         }
 
