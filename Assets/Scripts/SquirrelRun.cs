@@ -5,7 +5,7 @@ using UnityEngine;
 public class SquirrelRun : MonoBehaviour
 {
     private GameManager gameManager;
-    private float speed = 0.01f;
+    private float speed = 0.015f;
     private float closeness = 5f;
     private float goalCloseness = 2f;
 
@@ -14,7 +14,6 @@ public class SquirrelRun : MonoBehaviour
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameManager.state == GameManager.StateType.SQUIRREL_RUN)

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //private static GameManager instance;
     public enum StateType
     {
         SHIP_LAND,
@@ -22,7 +21,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("Game state is");
-        //Debug.Log(state);
+/*        if (state != StateType.WATER_FILL)
+        {
+            state = StateType.VALVE_FIX;
+        }*/
+        Debug.Log(state);
     }
 }

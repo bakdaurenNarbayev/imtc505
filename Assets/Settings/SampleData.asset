@@ -29,8 +29,14 @@ MonoBehaviour:
       type: 3}
   - identifier: Squirrel
     prefab: {fileID: 1745488152287196, guid: fde5b764f9082cd4a8969c93986aa53a, type: 3}
+  - identifier: FountainText
+    prefab: {fileID: 6930810733556124559, guid: dcbf9f6497732314cbaf0ac5175909c2,
+      type: 3}
   - identifier: FountainValve
     prefab: {fileID: 169302, guid: 2b6a2468456beb54da8dc355577cf363, type: 3}
+  - identifier: Water
+    prefab: {fileID: 5648618660238992027, guid: 52a6a05c8380ae743a35353e109b83af,
+      type: 3}
   - identifier: Bucket
     prefab: {fileID: 5882448671471983631, guid: a8ec020d33f1adc439a008e158d63ba1,
       type: 3}

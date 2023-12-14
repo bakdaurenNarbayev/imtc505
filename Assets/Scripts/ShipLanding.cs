@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShipLanding : MonoBehaviour
 {
     private GameManager gameManager;
-    private float speed = 0.05f;
+    private float speed = 0.1f;
     private float groundLevel = 3f;
 
     void Start()
@@ -13,7 +13,6 @@ public class ShipLanding : MonoBehaviour
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameManager.state == GameManager.StateType.SHIP_LAND)

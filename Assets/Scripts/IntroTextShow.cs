@@ -6,8 +6,7 @@ public class IntroTextShow : MonoBehaviour
 {
     private GameManager gameManager;
     private GameObject objectToActivate;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
@@ -16,7 +15,6 @@ public class IntroTextShow : MonoBehaviour
         objectToActivate.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (gameManager.state == GameManager.StateType.INTRO_TEXT)
