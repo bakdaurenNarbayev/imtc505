@@ -65,6 +65,7 @@ public class BucketFill : MonoBehaviour
                         count++;
                         if(count >= 120)
                         {
+                            GameObject.Find("BucketWater").SetActive(false);
                             gameManager.state = GameManager.StateType.TREE_WATER;
                         }
                     }

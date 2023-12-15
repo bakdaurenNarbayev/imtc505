@@ -5,7 +5,7 @@ using UnityEngine;
 public class SquirrelRun : MonoBehaviour
 {
     private GameManager gameManager;
-    private GameObject wp1, wp2, wp3, wp4;
+    private GameObject wp1, wp2, wp3, wp4, wp5;
     private float speed = 0.015f;
     private float closeness = 5f;
     private float goalCloseness = 2f;
@@ -20,6 +20,8 @@ public class SquirrelRun : MonoBehaviour
         wp2 = GameObject.Find("WP2(Clone)");
         wp3 = GameObject.Find("WP3(Clone)");
         wp4 = GameObject.Find("WP4(Clone)");
+        wp5 = GameObject.Find("WP5(Clone)");
+        count = 5;
     }
 
     void Update()
@@ -29,6 +31,7 @@ public class SquirrelRun : MonoBehaviour
             playerPosition = GameObject.Find("Main Camera").transform.position;
             position = transform.position;
 
+            transform.LookAt(fountainPosition);
             movement = (fountainPosition - position).normalized;
 
             if (Vector3.Distance(position, playerPosition) < closeness)
@@ -75,6 +78,47 @@ public class SquirrelRun : MonoBehaviour
                 return;
             }
 
+            transform.LookAt(wpPosition);
+            movement = (wpPosition - position).normalized;
+
+            if (Vector3.Distance(position, wpPosition) > goalCloseness)
+            {
+                position = position + speed * movement;
+            }
+            else
+            {
+                count++;
+            }
+
+            transform.position = position;
+        }
+
+        if (gameManager.state == GameManager.StateType.SQUIRREL_RUN_AGAIN_X2)
+        {
+            position = transform.position;
+            wpPosition = wp3.transform.position;
+
+            switch (count)
+            {
+                case 5:
+                    break;
+                case 6:
+                    wpPosition = wp2.transform.position;
+                    break;
+                case 7:
+                    wpPosition = wp5.transform.position;
+                    break;
+                default:
+                    break;
+            }
+
+            if (count > 7)
+            {
+                gameManager.state = GameManager.StateType.SYILX_TEXT;
+                return;
+            }
+
+            transform.LookAt(wpPosition);
             movement = (wpPosition - position).normalized;
 
             if (Vector3.Distance(position, wpPosition) > goalCloseness)

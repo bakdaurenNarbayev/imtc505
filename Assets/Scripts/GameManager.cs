@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour
         TREE_TEXT,
         WATER_POUR,
         TREE_WATER,
-        WIND_HINT
+        SQUIRREL_RUN_AGAIN_X2,
+        SYILX_TEXT,
+        PUZZLE_SHOW,
+        LAZER_SHOOT,
+        PUZZLE_SOLVE
     };
 
     public StateType state = StateType.SHIP_LAND;
@@ -26,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         if (state == StateType.SHIP_LAND)
         {
-            state = StateType.WATER_POUR;
+            state = StateType.SQUIRREL_RUN_AGAIN_X2;
         }
         Debug.Log(state);
     }

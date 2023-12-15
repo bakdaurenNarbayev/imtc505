@@ -28,7 +28,7 @@ public class TreeWaterPosition : MonoBehaviour
                 position.y -= 0.37f / 300;
             } else if(count > 1000)
             {
-                gameManager.state = GameManager.StateType.WIND_HINT;
+                gameManager.state = GameManager.StateType.SQUIRREL_RUN_AGAIN_X2;
             }
 
             transform.position = position;

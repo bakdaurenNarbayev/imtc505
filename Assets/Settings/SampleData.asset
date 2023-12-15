@@ -37,6 +37,9 @@ MonoBehaviour:
   - identifier: TreeWater
     prefab: {fileID: 4823751300432204557, guid: 770ca033c02beca4982d2e5dedbfcd9f,
       type: 3}
+  - identifier: Puzzle
+    prefab: {fileID: 4367450697801512559, guid: 33f1fc66c1a385845be4b24ed93a03bc,
+      type: 3}
   - identifier: IntroText
     prefab: {fileID: 6930810733556124559, guid: 906877960179d7e43a0a8fb7dc7ce8fb,
       type: 3}
@@ -45,6 +48,9 @@ MonoBehaviour:
       type: 3}
   - identifier: TreeText
     prefab: {fileID: 6930810733556124559, guid: ec3b49f9cd8946b41bb9b7c5d837bc21,
+      type: 3}
+  - identifier: SyilxText
+    prefab: {fileID: 6930810733556124559, guid: e88bbd060acf9384a96ddcccb7d8ffd3,
       type: 3}
   - identifier: WP1
     prefab: {fileID: 2587264745562404763, guid: aefce5d4de7bf924ba58e94557d7a807,
@@ -57,4 +63,7 @@ MonoBehaviour:
       type: 3}
   - identifier: WP4
     prefab: {fileID: 2587264745562404763, guid: e6fd3e5878f8f4c44ab50cd6111aa6eb,
+      type: 3}
+  - identifier: WP5
+    prefab: {fileID: 2587264745562404763, guid: bdd5cb8cf5cd87147bf3174748f50f41,
       type: 3}
