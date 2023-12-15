@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ValveRotation : MonoBehaviour
 {
     private GameManager gameManager;
     private Quaternion initialRotation, rotation;
+    private Transform targetPoF, PoF;
 
     void Start()
     {
         gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
         initialRotation = GameObject.Find("Valve").transform.rotation;
+        targetPoF = GameObject.Find("TargetPoF").transform;
     }
 
     void Update()
@@ -18,6 +21,7 @@ public class ValveRotation : MonoBehaviour
         if (gameManager.state == GameManager.StateType.VALVE_FIX)
         {
             rotation = GameObject.Find("Valve").transform.rotation;
+            PoF = GameObject.Find("PoF").transform;
 
             rotation.x = initialRotation.x;
             rotation.z = initialRotation.z;
@@ -27,12 +31,10 @@ public class ValveRotation : MonoBehaviour
                 rotation.y = initialRotation.y;
             }
 
-            Debug.Log(rotation.y - initialRotation.y);
-
-            if (rotation.y - initialRotation.y > 1f)
+            if (Vector3.Distance(PoF.position, targetPoF.position) < 0.126f)
             {
-                rotation.y = Mathf.Min(initialRotation.y + 1.1f, rotation.y);
                 gameManager.state = GameManager.StateType.WATER_FILL;
+                initialRotation = rotation;
             }
 
             GameObject.Find("Valve").transform.rotation = rotation;

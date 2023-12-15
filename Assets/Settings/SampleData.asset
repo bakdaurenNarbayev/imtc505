@@ -38,5 +38,5 @@ MonoBehaviour:
     prefab: {fileID: 5648618660238992027, guid: 52a6a05c8380ae743a35353e109b83af,
       type: 3}
   - identifier: Bucket
-    prefab: {fileID: 5882448671471983631, guid: a8ec020d33f1adc439a008e158d63ba1,
+    prefab: {fileID: 4392571237044202829, guid: 45f44c4c97596e94ab286fc78063ba00,
       type: 3}

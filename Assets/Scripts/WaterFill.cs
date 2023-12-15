@@ -18,7 +18,7 @@ public class WaterFill : MonoBehaviour
     {
         if (gameManager.state == GameManager.StateType.WATER_FILL)
         {
-            if (count <= 1500 && count % 80 == 0)
+            if (count <= 1500 && count % 50 == 0)
             {
                 foreach (Transform child in transform)
                 {
@@ -32,7 +32,7 @@ public class WaterFill : MonoBehaviour
 
             count++;
 
-            if (count > 4500)
+            if (count > 1500)
             {
                 gameManager.state = GameManager.StateType.BUCKET_FILL;
             }

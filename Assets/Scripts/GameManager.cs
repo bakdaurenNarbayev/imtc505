@@ -21,10 +21,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-/*        if (state != StateType.WATER_FILL)
+        if (state == StateType.SHIP_LAND)
         {
             state = StateType.VALVE_FIX;
-        }*/
+        }
         Debug.Log(state);
     }
 }
