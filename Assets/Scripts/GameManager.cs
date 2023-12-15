@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
         WATER_FILL,
         BUCKET_FILL,
         SQUIRREL_RUN_AGAIN,
-        TREE_TEXT
+        TREE_TEXT,
+        WATER_POUR,
+        TREE_WATER,
+        WIND_HINT
     };
 
     public StateType state = StateType.SHIP_LAND;
@@ -23,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
         if (state == StateType.SHIP_LAND)
         {
-            state = StateType.VALVE_FIX;
+            state = StateType.WATER_POUR;
         }
         Debug.Log(state);
     }
