@@ -21,7 +21,6 @@ public class SquirrelRun : MonoBehaviour
         wp3 = GameObject.Find("WP3(Clone)");
         wp4 = GameObject.Find("WP4(Clone)");
         wp5 = GameObject.Find("WP5(Clone)");
-        count = 5;
     }
 
     void Update()
@@ -43,6 +42,8 @@ public class SquirrelRun : MonoBehaviour
                 }
                 else
                 {
+                    position.y = 0;
+                    transform.position = position;
                     gameManager.state = GameManager.StateType.FOUNTAIN_TEXT;
                 }
             }
@@ -90,6 +91,7 @@ public class SquirrelRun : MonoBehaviour
                 count++;
             }
 
+            position.y = 0;
             transform.position = position;
         }
 
@@ -130,6 +132,7 @@ public class SquirrelRun : MonoBehaviour
                 count++;
             }
 
+            position.y = 0;
             transform.position = position;
         }
     }

@@ -40,6 +40,9 @@ MonoBehaviour:
   - identifier: Puzzle
     prefab: {fileID: 4367450697801512559, guid: 33f1fc66c1a385845be4b24ed93a03bc,
       type: 3}
+  - identifier: Manhole
+    prefab: {fileID: 4092147843395038576, guid: 85d5069bc49377e42bec6173d0339bcf,
+      type: 3}
   - identifier: IntroText
     prefab: {fileID: 6930810733556124559, guid: 906877960179d7e43a0a8fb7dc7ce8fb,
       type: 3}

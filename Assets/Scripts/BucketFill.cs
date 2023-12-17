@@ -8,7 +8,7 @@ public class BucketFill : MonoBehaviour
     private Transform water, bucketWater;
     private GameManager gameManager;
     private GameObject up, down;
-    private float detectionRadius = 1f;
+    private float detectionRadius = 2f;
     private Vector3 position;
     private int count = 0;
 

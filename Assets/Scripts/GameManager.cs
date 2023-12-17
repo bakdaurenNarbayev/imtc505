@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (state == StateType.SHIP_LAND)
+        if(state == StateType.SHIP_LAND)
         {
-            state = StateType.SQUIRREL_RUN_AGAIN_X2;
+            state = StateType.LAZER_SHOOT;
         }
         Debug.Log(state);
     }

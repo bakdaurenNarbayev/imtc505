@@ -351,7 +351,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Story plot introduction
+  m_text: "The Syilx monument at UBC's Okanagan campus stands as a tribute to the
+    indigenous Syilx people, who inhabited these lands long before the nuclear war
+    reshaped the world. So, the land into which you have landed is located on traditional
+    territory spanning the Canada\u2013US boundary in Washington state and British
+    Columbia in the Okanagan Country region. At the peak of Syilx culture approximately
+    3000 years ago, an estimated 12,000 people lived in this valley and its surrounding
+    areas.  \r\n\r\nThere used to be several cities associated with this territory,
+    and the names of these towns throughout the Okanagan Valley originate from their
+    Indigenous languages. This includes Osoyoos, Keremeos, Penticton, and Kelowna,
+    reflecting the long history of the Syilx people on this land. One significant
+    milestone in Syilx history occurred in August 1987 when the Syilx Okanagan people
+    signed the Okanagan Nation Declaration at Komasket Park, declaring their sovereignty.
+    The Okanagan Nation Declaration was a commitment from the Syilx Okanagan people
+    to care for their land, affirming their rights to resources, and expressing their
+    desire to preserve their culture and land for future generations.  The Syilx
+    people employed an adaptive strategy, moving within traditional areas throughout
+    the year to fish, hunt, or gather food. During the winter months, they resided
+    in semi-permanent villages of kekulis, a type of pithouse. \r\n\r\nAmong their
+    customs, one unique practice of the Okanagan people was their tradition of singing
+    to express gratitude for food and healing. Also, there used to be numerous cultural
+    heritage sites associated with the Syilx people. Spotted Lake was a sacred medicine
+    lake and a protected cultural heritage site of the Syilx Okanagan People. Now,
+    there will be a puzzle based on this information. Upon solving it, you will gain
+    access to the mysterious part of your journey!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fea6b26abeefbc547b6aca1dbda0a34d, type: 2}
   m_sharedMaterial: {fileID: -2049848100760321927, guid: fea6b26abeefbc547b6aca1dbda0a34d,
