@@ -32,7 +32,7 @@ public class LazerShoot : MonoBehaviour
         {
             count++;
             lazer.transform.localScale = new Vector3(0.1f, count / 100, 0.1f);
-            lazer.transform.localPosition = new Vector3(0.063f, 2.14f - 0.04f * count / 100, -0.6f - count / 100);
+            lazer.transform.localPosition = new Vector3(0.063f, 2.255f - 0.04f * count / 100, -3.494f - count / 100);
             if (count >= 2000)
             {
                 gameManager.state = GameManager.StateType.END_PARTI_TEXT;

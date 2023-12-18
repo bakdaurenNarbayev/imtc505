@@ -28,11 +28,6 @@ public class GameManager : MonoBehaviour
     };
 
     public StateType state = StateType.SHIP_LAND;
-
-    private void Start()
-    {
-        state = StateType.LAZER_SHOOT;
-    }
     
     private void Update()
     {
