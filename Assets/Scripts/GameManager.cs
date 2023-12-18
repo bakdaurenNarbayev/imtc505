@@ -29,12 +29,13 @@ public class GameManager : MonoBehaviour
 
     public StateType state = StateType.SHIP_LAND;
 
+    private void Start()
+    {
+        state = StateType.LAZER_SHOOT;
+    }
+    
     private void Update()
     {
-        /*if(state == StateType.SHIP_LAND)
-        {
-            state = StateType.LAZER_SHOOT;
-        }*/
         Debug.Log(state);
     }
 }

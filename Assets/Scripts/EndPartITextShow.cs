@@ -8,7 +8,7 @@ public class EndPartITextShow : MonoBehaviour
     private GameObject objectToActivate;
     private float closeness = 5f;
     Vector3 playerPosition;
-    private GameObject monument;
+    private GameObject manhole;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class EndPartITextShow : MonoBehaviour
         objectToActivate = transform.GetChild(0).gameObject;
         objectToActivate.SetActive(false);
 
-        monument = GameObject.Find("Manhole(Clone)");
+        manhole = GameObject.Find("Manhole(Clone)");
     }
 
     void Update()
@@ -26,12 +26,16 @@ public class EndPartITextShow : MonoBehaviour
         {
             playerPosition = GameObject.Find("Main Camera").transform.position;
 
-            if (Vector3.Distance(monument.transform.position, playerPosition) < closeness)
+            if (Vector3.Distance(manhole.transform.position, playerPosition) < closeness)
             {
                 objectToActivate.SetActive(true);
                 objectToActivate = null;
-                gameManager.state = GameManager.StateType.PASSWORD_ENTER;
             }
         }
+    }
+
+    public void changeState()
+    {
+        gameManager.state = GameManager.StateType.PASSWORD_ENTER;
     }
 }

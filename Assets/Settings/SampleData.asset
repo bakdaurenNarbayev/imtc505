@@ -43,6 +43,9 @@ MonoBehaviour:
   - identifier: Manhole
     prefab: {fileID: 4092147843395038576, guid: 85d5069bc49377e42bec6173d0339bcf,
       type: 3}
+  - identifier: Keyboard
+    prefab: {fileID: 6930810733556124559, guid: 974598c7cd603df4ebade1ff7702c0ce,
+      type: 3}
   - identifier: IntroText
     prefab: {fileID: 6930810733556124559, guid: 906877960179d7e43a0a8fb7dc7ce8fb,
       type: 3}
