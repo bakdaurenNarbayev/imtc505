@@ -20,6 +20,7 @@ public class IntroTextShow : MonoBehaviour
         if (gameManager.state == GameManager.StateType.INTRO_TEXT)
         {
             objectToActivate.SetActive(true);
+            objectToActivate = null;
             gameManager.state = GameManager.StateType.SQUIRREL_RUN;
         }
     }

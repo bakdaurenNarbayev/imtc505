@@ -206,9 +206,9 @@ GameObject:
   - component: {fileID: 3464395001938839902}
   - component: {fileID: 4665157281537287932}
   - component: {fileID: 941895475344048534}
-  - component: {fileID: 94344588947943516}
+  - component: {fileID: 506971819328995171}
   m_Layer: 5
-  m_Name: TreeText
+  m_Name: EndPartIIText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &94344588947943516
+--- !u!114 &506971819328995171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6930810733556124559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b24aade7a7ece245a5c10532fce2afb, type: 3}
+  m_Script: {fileID: 11500000, guid: e235fce218a030849a15e7d0b2393f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6930810734943986772
@@ -351,13 +351,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In the old days, trees were awesome. They cleaned up our mess and gave
-    us fresh air. But then humans started messing things up. They chopped down trees
-    like there was no tomorrow, and pollution made it hard for them to work their
-    magic. The weather got wild, some places sizzled while others drowned. The heat
-    turned up, making it tough for these leafy heroes to do their job. It was all
-    because of what humans were up to, and those trees sure felt the brunt of it
-    all. You should help this tree by pouring some water on it, making it happier!
+  m_text: "Uh-oh, looks like you arrived a bit late, buddy! Unfortunately, all the
+    survivors have passed due to not having enough food. It's pretty heartbreaking\u2014after
+    making it all the way down here, there's nothing left to find! Tough break! At
+    least now, you've got a lot of information about humanity and how they almost
+    wiped out their beautiful planet. It's a reminder of how careful they should
+    have been with their world!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fea6b26abeefbc547b6aca1dbda0a34d, type: 2}
   m_sharedMaterial: {fileID: -2049848100760321927, guid: fea6b26abeefbc547b6aca1dbda0a34d,
@@ -556,7 +555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Trees
+  m_text: 'Story Ending: Part II'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d15b9765f7a456340a28cee00f9beeb2, type: 2}
   m_sharedMaterial: {fileID: -1440009900055822571, guid: d15b9765f7a456340a28cee00f9beeb2,

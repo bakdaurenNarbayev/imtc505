@@ -55,6 +55,12 @@ MonoBehaviour:
   - identifier: SyilxText
     prefab: {fileID: 6930810733556124559, guid: e88bbd060acf9384a96ddcccb7d8ffd3,
       type: 3}
+  - identifier: EndPartIText
+    prefab: {fileID: 6930810733556124559, guid: 3c77b8e02eeb45f44804950547357755,
+      type: 3}
+  - identifier: EndPartIIText
+    prefab: {fileID: 6930810733556124559, guid: 329bcd8dda96f5b4880747487660d107,
+      type: 3}
   - identifier: WP1
     prefab: {fileID: 2587264745562404763, guid: aefce5d4de7bf924ba58e94557d7a807,
       type: 3}

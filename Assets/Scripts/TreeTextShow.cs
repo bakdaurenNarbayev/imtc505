@@ -6,6 +6,7 @@ public class TreeTextShow : MonoBehaviour
 {
     private GameManager gameManager;
     private GameObject objectToActivate;
+    Vector3 playerPosition;
 
     void Start()
     {
@@ -19,8 +20,17 @@ public class TreeTextShow : MonoBehaviour
     {
         if (gameManager.state == GameManager.StateType.TREE_TEXT)
         {
-            objectToActivate.SetActive(true);
-            gameManager.state = GameManager.StateType.WATER_POUR;
+            playerPosition = GameObject.Find("Main Camera").transform.position;
+
+            if (playerPosition.x > 18.5f && playerPosition.x < 22.5f)
+            {
+                if (playerPosition.z > -2.5f && playerPosition.z < 2.5f)
+                {
+                    objectToActivate.SetActive(true);
+                    objectToActivate = null;
+                    gameManager.state = GameManager.StateType.WATER_POUR;
+                }
+            }
         }
     }
 }

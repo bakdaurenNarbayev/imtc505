@@ -351,7 +351,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Story plot introduction
+  m_text: "Back in the day, getting water was like scoring gold\u2014scarce and super
+    valuable. The weather went haywire, making some places bone-dry while others
+    got flooded big time. People wasted water like it was endless, but it wasn\u2019t.
+    Lakes turned shallow, and rivers got so skinny you could practically jump over
+    them. Plus, factories and junk made the water dirty, and cleaning it up was a
+    headache. With the planet heating up, the ice melted faster than ice cream on
+    a hot day, messing up the whole water cycle. Because of all that, humans had
+    a huge water scarcity problem, and they should've done more to save it. So, everyone
+    had to get smart, saving every drop, fixing leaks, and finding new ways to keep
+    water clean. It was a big mission to save the most important thing ever. Now,
+    there's only limited water in the world, and lucky for you, you can find some
+    around this fountain area. Take some water using the bucket and then follow the
+    squirl to your next step!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fea6b26abeefbc547b6aca1dbda0a34d, type: 2}
   m_sharedMaterial: {fileID: -2049848100760321927, guid: fea6b26abeefbc547b6aca1dbda0a34d,
@@ -550,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fountain
+  m_text: Water
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d15b9765f7a456340a28cee00f9beeb2, type: 2}
   m_sharedMaterial: {fileID: -1440009900055822571, guid: d15b9765f7a456340a28cee00f9beeb2,

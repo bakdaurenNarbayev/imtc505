@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SyilxTextShow : MonoBehaviour
+public class EndPartITextShow : MonoBehaviour
 {
     private GameManager gameManager;
     private GameObject objectToActivate;
@@ -17,12 +17,12 @@ public class SyilxTextShow : MonoBehaviour
         objectToActivate = transform.GetChild(0).gameObject;
         objectToActivate.SetActive(false);
 
-        monument = GameObject.Find("Puzzle(Clone)");
+        monument = GameObject.Find("Manhole(Clone)");
     }
 
     void Update()
     {
-        if (gameManager.state == GameManager.StateType.SYILX_TEXT)
+        if (gameManager.state == GameManager.StateType.END_PARTI_TEXT)
         {
             playerPosition = GameObject.Find("Main Camera").transform.position;
 
@@ -30,7 +30,7 @@ public class SyilxTextShow : MonoBehaviour
             {
                 objectToActivate.SetActive(true);
                 objectToActivate = null;
-                gameManager.state = GameManager.StateType.PUZZLE_SHOW;
+                gameManager.state = GameManager.StateType.PASSWORD_ENTER;
             }
         }
     }

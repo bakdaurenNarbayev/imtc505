@@ -35,7 +35,7 @@ public class LazerShoot : MonoBehaviour
             lazer.transform.localPosition = new Vector3(0.063f, 2.14f - 0.04f * count / 100, -0.6f - count / 100);
             if (count >= 2000)
             {
-                gameManager.state = GameManager.StateType.PUZZLE_SOLVE;
+                gameManager.state = GameManager.StateType.END_PARTI_TEXT;
             }
         }
     }

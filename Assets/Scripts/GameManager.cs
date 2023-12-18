@@ -21,17 +21,20 @@ public class GameManager : MonoBehaviour
         SYILX_TEXT,
         PUZZLE_SHOW,
         LAZER_SHOOT,
-        PUZZLE_SOLVE
+        END_PARTI_TEXT,
+        PASSWORD_ENTER,
+        END_PARTII_TEXT,
+        END
     };
 
     public StateType state = StateType.SHIP_LAND;
 
     private void Update()
     {
-        if(state == StateType.SHIP_LAND)
+        /*if(state == StateType.SHIP_LAND)
         {
             state = StateType.LAZER_SHOOT;
-        }
+        }*/
         Debug.Log(state);
     }
 }
